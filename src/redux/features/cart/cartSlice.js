@@ -25,11 +25,47 @@ const cartSlice = createSlice({
         cartItems,
       });
     },
+    increase: (state, { payload }) => {
+      const cartItems = state.cartItems.map((item) => {
+        if (item.id === payload.id) {
+          return {
+            ...item,
+            amount: item.amount + 1,
+          };
+        }
+
+        return item;
+      });
+
+      return ({
+        ...state,
+        cartItems,
+      });
+    },
+    decrease: (state, { payload }) => {
+      const cartItems = state.cartItems.map((item) => {
+        if (item.id === payload.id) {
+          return {
+            ...item,
+            amount: item.amount - 1,
+          };
+        }
+
+        return item;
+      });
+
+      return ({
+        ...state,
+        cartItems,
+      });
+    },
   },
 });
 
 // console.log(cartSlice);
 
-export const { clearCart, removeItem } = cartSlice.actions;
+export const {
+  clearCart, removeItem, increase, decrease,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
