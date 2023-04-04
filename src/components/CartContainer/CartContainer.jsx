@@ -39,7 +39,7 @@ const CartContainer = () => {
             {' '}
             <span>
               $
-              {total}
+              {total.toFixed(2)}
             </span>
           </h4>
         </div>
