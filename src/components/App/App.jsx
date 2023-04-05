@@ -7,6 +7,7 @@ import { calculateTotals } from '../../redux/features/cart/cartSlice';
 
 function App() {
   const { cartItems } = useSelector((store) => store.cart);
+  const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
   useEffect(
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <main>
-      <Modal />
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
     </main>
