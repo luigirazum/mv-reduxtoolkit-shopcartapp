@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mv-reduxtoolkit-shopcartapp/static/css/main.a1407077.css",
+    "main.js": "/mv-reduxtoolkit-shopcartapp/static/js/main.abb58230.js",
+    "index.html": "/mv-reduxtoolkit-shopcartapp/index.html",
+    "main.a1407077.css.map": "/mv-reduxtoolkit-shopcartapp/static/css/main.a1407077.css.map",
+    "main.abb58230.js.map": "/mv-reduxtoolkit-shopcartapp/static/js/main.abb58230.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1407077.css",
+    "static/js/main.abb58230.js"
+  ]
+}
