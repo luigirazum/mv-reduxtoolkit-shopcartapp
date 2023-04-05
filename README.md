@@ -1,729 +1,234 @@
-# Redux Toolkit
+<a name="readme-top"></a>
 
-#### React Course
+<div align="center">
 
-[My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
+  <img src="src/assets/logo/shopcart-logo.svg" alt="logo" width="100" height="auto" />
+  <br/>
 
-#### Support
+### ShopCart App
+<b>ShopCart App</b> is the MVP of a [SPA](https://en.wikipedia.org/wiki/Single-page_application) application that lets users to:<br>1) Display a Shopping list of items,<br>2) Increase or Decrease the number of each item,<br>3) Remove an item from the list,<br>4) Clear the whole list with the help of the <kbd>CLEAR CART</kbd> button,<br>5) Show a modal screen to confirm the "CLEAR CART" action,<br>6) Shows the total number of items and the total amount of the cart and,<br>7) Retrieves initial data from an API when the App loads.
 
-Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
+<sup>This project was built in order to learn how to use Redux in the context of a real application.</sup>
 
-#### Docs
+</div>
 
-[Redux Toolkit Docs](https://redux-toolkit.js.org/introduction/getting-started)
+# 📗 Table of Contents
 
-#### Install Template
+- [📗 Table of Contents](#-table-of-contents)
+- [🛍️ ShopCart App](#about-project)
+    - [Preview ShopCart App](#preview-of-shopcart-app)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Available Scripts](#available-scripts)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [⭐ Show your support ](#-show-your-support-)
+  - [📝 License ](#-license-)
 
-```sh
-npx create-react-app my-app --template redux
-```
+---
+# 🛍️ ShopCart App <a name="about-project"></a>
 
-- @latest
+*ShopCart App* is the MVP of a [SPA](https://en.wikipedia.org/wiki/Single-page_application) application that lets users display a Shopping list of items, Increase/Decrease the number of each item, Remove an item or the whole list,when the user tries to remove all the items a modal screen is shown to confirm the action, it also shows the total number of items in a badge at the top/right of the screen and the total amount of the cart and an API retrieves the initial data when the App loads.
 
-```sh
-npx create-react-app@latest my-app --template redux
-```
+<div align="center">
+<sup>This project was built in order to learn how to use <b>Redux</b> in the context of a real application.</sup>
 
-#### Existing App
 
-```sh
-npm install @reduxjs/toolkit react-redux
-```
+### Preview of ShopCart App.
 
-#### @reduxjs/toolkit
+<p>
+  <img src="src/assets/wireframe/shopcart-wireframe.png" alt="ShopCart App" width="600" height="auto" /><br>
+  <sup>This is a screenshot of how the <b>ShopCart App</b> looks at its initial state.</sup><br>
+</p>
 
-consists of few libraries
+</div>
 
-- redux (core library, state management)
-- immer (allows to mutate state)
-- redux-thunk (handles async actions)
-- reselect (simplifies reducer functions)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Extras
+## 🛠 Built With <a name="built-with"></a>
+### Tech Stack <a name="tech-stack"></a>
+This project was bootstrapped with:
+  <ul>
+    <li>
+      <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
+      <img align="center" title="ReactJS" alt="react js" width="20px" height="20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> React</a>
+    </li>
+    <li>
+      <a href="https://create-react-app.dev/" target="_blank" rel="noopener noreferrer">
+      <img align="center" title="Create React App CLI" alt="create react app" width="20px" height="20px" src="https://create-react-app.dev/img/logo.svg" /> Create React App</a>
+    </li>
+    <li>
+      <a href="https://redux-toolkit.js.org/" target="_blank" rel="noopener noreferrer">
+      <img align="center" title="Redux Toolkit" alt="redux toolkit" width="20px" height="20px" src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg" /> Redux Toolkit</a>
+    </li>
+  </ul>
 
-- redux devtools
-- combine reducers
 
-#### react-redux
+### Key Features <a name="key-features"></a>
 
-connects our app to redux
+- *Display a list of items*
+- *Increase/Decrease the quantity of each item listed*
+- *Remove an item or the whole list*
+- *Ask for confirmation with a modal window for deleting the whole list*
+- *Show the total of items and the total amount of the ShopCart*
+- *Fetch initial data from an API*
 
-#### Setup Store
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- create store.js
+## 🚀 Live Demo <a name="live-demo"></a>
 
-```js
-import { configureStore } from '@reduxjs/toolkit';
+- <a href="https://luigirazum.github.io/mv-reduxtoolkit-shopcartapp/" target="_blank" rel="noopener noreferrer">**ShopCart App - Link**</a>
 
-export const store = configureStore({
-  reducer: {},
-});
-```
+<div align="center">
 
-#### Setup Provider
+### ShopCart Live Demo Preview
 
-- index.js
+<p>
+  <sup>This is a <b>Demo</b> for the <b>ShopCart App</b>, click on the link 👆 above and test it.</sup><br>
+  <img src="src/assets/demo/shopcart-demo.gif" alt="ShopCart App Demo" width="600" height="auto" /><br>
+</p>
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-// import store and provider
-import { store } from './store';
-import { Provider } from 'react-redux';
+</div>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-```
 
-#### Setup Cart Slice
+## 💻 Getting Started <a name="getting-started"></a>
 
-- application feature
-- create features folder/cart
-- create cartSlice.js
+To get a local copy of this project up and running, follow these steps.
 
-```js
-import { createSlice } from '@reduxjs/toolkit';
+- ### Prerequisites
 
-const initialState = {
-  cartItems: [],
-  amount: 0,
-  total: 0,
-  isLoading: true,
-};
+   - In order to run this project locally you need `git` installed. Please got to [Getting Started - Installing Git guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the steps described for your system to install `git`.
 
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-});
-
-console.log(cartSlice);
-
-export default cartSlice.reducer;
-```
-
-- store.js
-
-```js
-import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './features/cart/cartSlice';
-
-export const store = configureStore({
-  reducer: {
-    cart: cartReducer,
-  },
-});
-```
-
-#### Redux DevTools
-
-- extension
-
-#### Access store value
-
-- create components/Navbar.js
-
-```js
-import { CartIcon } from '../icons';
-import { useSelector } from 'react-redux';
-
-const Navbar = () => {
-  const { amount } = useSelector((state) => state.cart);
-
-  return (
-    <nav>
-      <div className='nav-center'>
-        <h3>redux toolkit</h3>
-        <div className='nav-container'>
-          <CartIcon />
-          <div className='amount-container'>
-            <p className='total-amount'>{amount}</p>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
-export default Navbar;
-```
-
-#### Hero Icons
-
-- [Hero Icons](https://heroicons.com/)
-
-```css
-nav svg {
-  width: 40px;
-  color: var(--clr-white);
-}
-```
-
-#### Setup Cart
-
-- cartSlice.js
-
-```js
-import cartItems from '../../cartItems';
-
-const initialState = {
-  cartItems: cartItems,
-  amount: 0,
-  total: 0,
-  isLoading: true,
-};
-```
-
-- create CartContainer.js and CartItem.js
-- CartContainer.js
-
-```js
-import React from 'react';
-import CartItem from './CartItem';
-import { useSelector } from 'react-redux';
-
-const CartContainer = () => {
-  const { cartItems, total, amount } = useSelector((state) => state.cart);
-
-  if (amount < 1) {
-    return (
-      <section className='cart'>
-        {/* cart header */}
-        <header>
-          <h2>your bag</h2>
-          <h4 className='empty-cart'>is currently empty</h4>
-        </header>
-      </section>
-    );
-  }
-  return (
-    <section className='cart'>
-      {/* cart header */}
-      <header>
-        <h2>your bag</h2>
-      </header>
-      {/* cart items */}
-      <div>
-        {cartItems.map((item) => {
-          return <CartItem key={item.id} {...item} />;
-        })}
-      </div>
-      {/* cart footer */}
-      <footer>
-        <hr />
-        <div className='cart-total'>
-          <h4>
-            total <span>${total}</span>
-          </h4>
-        </div>
-        <button className='btn clear-btn'>clear cart</button>
-      </footer>
-    </section>
-  );
-};
-
-export default CartContainer;
-```
-
-- CartItem.js
-
-```js
-import React from 'react';
-import { ChevronDown, ChevronUp } from '../icons';
-
-const CartItem = ({ id, img, title, price, amount }) => {
-  return (
-    <article className='cart-item'>
-      <img src={img} alt={title} />
-      <div>
-        <h4>{title}</h4>
-        <h4 className='item-price'>${price}</h4>
-        {/* remove button */}
-        <button className='remove-btn'>remove</button>
-      </div>
-      <div>
-        {/* increase amount */}
-        <button className='amount-btn'>
-          <ChevronUp />
-        </button>
-        {/* amount */}
-        <p className='amount'>{amount}</p>
-        {/* decrease amount */}
-        <button className='amount-btn'>
-          <ChevronDown />
-        </button>
-      </div>
-    </article>
-  );
-};
-
-export default CartItem;
-```
-
-#### First Reducer
-
-- cartSlice.js
-- Immer library
-
-```js
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-  reducers: {
-    clearCart: (state) => {
-      state.cartItems = [];
-    },
-  },
-});
-
-export const { clearCart } = cartSlice.actions;
-```
-
-- create action
-
-```js
-const ACTION_TYPE = 'ACTION_TYPE';
-
-const actionCreator = (payload) => {
-  return { type: ACTION_TYPE, payload: payload };
-};
-```
-
-- CartContainer.js
-
-```js
-import React from 'react';
-import CartItem from './CartItem';
-import { useDispatch, useSelector } from 'react-redux';
-
-const CartContainer = () => {
-  const dispatch = useDispatch();
-
-  return (
-    <button
-      className='btn clear-btn'
-      onClick={() => {
-        dispatch(clearCart());
-      }}
-    >
-      clear cart
-    </button>
-  );
-};
-
-export default CartContainer;
-```
-
-#### Remove, Increase, Decrease
-
-- cartSlice.js
-
-```js
-import { createSlice } from '@reduxjs/toolkit';
-import cartItems from '../../cartItems';
-
-const initialState = {
-  cartItems: [],
-  amount: 0,
-  total: 0,
-  isLoading: true,
-};
-
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-  reducers: {
-    clearCart: (state) => {
-      state.cartItems = [];
-    },
-    removeItem: (state, action) => {
-      const itemId = action.payload;
-      state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
-    },
-    increase: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount = cartItem.amount + 1;
-    },
-    decrease: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount = cartItem.amount - 1;
-    },
-    calculateTotals: (state) => {
-      let amount = 0;
-      let total = 0;
-      state.cartItems.forEach((item) => {
-        amount += item.amount;
-        total += item.amount * item.price;
-      });
-      state.amount = amount;
-      state.total = total;
-    },
-  },
-});
-
-export const { clearCart, removeItem, increase, decrease, calculateTotals } =
-  cartSlice.actions;
-
-export default cartSlice.reducer;
-```
-
-- CartItem.js
-
-```js
-import React from 'react';
-import { ChevronDown, ChevronUp } from '../icons';
-
-import { useDispatch } from 'react-redux';
-import { removeItem, increase, decrease } from '../features/cart/cartSlice';
-
-const CartItem = ({ id, img, title, price, amount }) => {
-  const dispatch = useDispatch();
-
-  return (
-    <article className='cart-item'>
-      <img src={img} alt={title} />
-      <div>
-        <h4>{title}</h4>
-        <h4 className='item-price'>${price}</h4>
-        {/* remove button */}
-        <button
-          className='remove-btn'
-          onClick={() => {
-            dispatch(removeItem(id));
-          }}
-        >
-          remove
-        </button>
-      </div>
-      <div>
-        {/* increase amount */}
-        <button
-          className='amount-btn'
-          onClick={() => {
-            dispatch(increase({ id }));
-          }}
-        >
-          <ChevronUp />
-        </button>
-        {/* amount */}
-        <p className='amount'>{amount}</p>
-        {/* decrease amount */}
-        <button
-          className='amount-btn'
-          onClick={() => {
-            if (amount === 1) {
-              dispatch(removeItem(id));
-              return;
-            }
-            dispatch(decrease({ id }));
-          }}
-        >
-          <ChevronDown />
-        </button>
-      </div>
-    </article>
-  );
-};
-
-export default CartItem;
-```
-
-- App.js
-
-```js
-import { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import CartContainer from './components/CartContainer';
-import { useSelector, useDispatch } from 'react-redux';
-import { calculateTotals } from './features/cart/cartSlice';
-
-function App() {
-  const { cartItems } = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [cartItems]);
-
-  return (
-    <main>
-      <Navbar />
-      <CartContainer />
-    </main>
-  );
-}
-
-export default App;
-```
-
-#### Modal
-
-- create components/Modal.js
-
-```js
-const Modal = () => {
-  return (
-    <aside className='modal-container'>
-      <div className='modal'>
-        <h4>Remove all items from your shopping cart?</h4>
-        <div className='btn-container'>
-          <button type='button' className='btn confirm-btn'>
-            confirm
-          </button>
-          <button type='button' className='btn clear-btn'>
-            cancel
-          </button>
-        </div>
-      </div>
-    </aside>
-  );
-};
-export default Modal;
-```
-
-- App.js
-
-```js
-return (
-  <main>
-    <Modal />
-    <Navbar />
-    <CartContainer />
-  </main>
-);
-```
-
-#### modal slice
-
-- create features/modal/modalSlice.js
-
-```js
-import { createSlice } from '@reduxjs/toolkit';
-const initialState = {
-  isOpen: false,
-};
-
-const modalSlice = createSlice({
-  name: 'modal',
-  initialState,
-  reducers: {
-    openModal: (state, action) => {
-      state.isOpen = true;
-    },
-    closeModal: (state, action) => {
-      state.isOpen = false;
-    },
-  },
-});
-
-export const { openModal, closeModal } = modalSlice.actions;
-export default modalSlice.reducer;
-```
-
-- App.js
-
-```js
-const { isOpen } = useSelector((state) => state.modal);
-
-return (
-  <main>
-    {isOpen && <Modal />}
-    <Navbar />
-    <CartContainer />
-  </main>
-);
-```
-
-#### toggle modal
-
-- CartContainer.js
-
-```js
-import { openModal } from '../features/modal/modalSlice';
-
-return (
-  <button
-    className='btn clear-btn'
-    onClick={() => {
-      dispatch(openModal());
-    }}
-  >
-    clear cart
-  </button>
-);
-```
-
-- Modal.js
-
-```js
-import { closeModal } from '../features/modal/modalSlice';
-import { useDispatch } from 'react-redux';
-import { clearCart } from '../features/cart/cartSlice';
-
-const Modal = () => {
-  const dispatch = useDispatch();
-
-  return (
-    <aside className='modal-container'>
-      <div className='modal'>
-        <h4>Remove all items from your shopping cart?</h4>
-        <div className='btn-container'>
-          <button
-            type='button'
-            className='btn confirm-btn'
-            onClick={() => {
-              dispatch(clearCart());
-              dispatch(closeModal());
-            }}
-          >
-            confirm
-          </button>
-          <button
-            type='button'
-            className='btn clear-btn'
-            onClick={() => {
-              dispatch(closeModal());
-            }}
-          >
-            cancel
-          </button>
-        </div>
-      </div>
-    </aside>
-  );
-};
-export default Modal;
-```
-
-#### async functionality with createAsyncThunk
-
-- [Course API](https://course-api.com/)
-- https://course-api.com/react-useReducer-cart-project
-- cartSlice.js
-
-- action type
-- callback function
-- lifecycle actions
-
-```js
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
-const url = 'https://course-api.com/react-useReducer-cart-project';
-
-export const getCartItems = createAsyncThunk('cart/getCartItems', () => {
-  return fetch(url)
-    .then((resp) => resp.json())
-    .catch((err) => console.log(error));
-});
-
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-  extraReducers: {
-    [getCartItems.pending]: (state) => {
-      state.isLoading = true;
-    },
-    [getCartItems.fulfilled]: (state, action) => {
-      console.log(action);
-      state.isLoading = false;
-      state.cartItems = action.payload;
-    },
-    [getCartItems.rejected]: (state) => {
-      state.isLoading = false;
-    },
-  },
-});
-```
-
-- App.js
-
-```js
-import { calculateTotals, getCartItems } from './features/cart/cartSlice';
-
-function App() {
-  const { cartItems, isLoading } = useSelector((state) => state.cart);
-
-  useEffect(() => {
-    dispatch(getCartItems());
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className='loading'>
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
-
-  return (
-    <main>
-      {isOpen && <Modal />}
-      <Navbar />
-      <CartContainer />
-    </main>
-  );
-}
-
-export default App;
-```
-
-#### Options
-
-```sh
-npm install axios
-```
-
-- cartSlice.js
-
-```js
-export const getCartItems = createAsyncThunk(
-  'cart/getCartItems',
-  async (name, thunkAPI) => {
-    try {
-      // console.log(name);
-      // console.log(thunkAPI);
-      // console.log(thunkAPI.getState());
-      // thunkAPI.dispatch(openModal());
-      const resp = await axios(url);
-
-      return resp.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue('something went wrong');
-    }
-  }
-);
-```
-
-#### The extraReducers "builder callback" notation
-
-cart/cartSlice
-
-```js
-const cartSlice = createSlice({
-  name: 'cart',
-  initialState,
-  reducers: {
-    // reducers
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(getCartItems.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getCartItems.fulfilled, (state, action) => {
-        // console.log(action);
-        state.isLoading = false;
-        state.cartItems = action.payload;
-      })
-      .addCase(getCartItems.rejected, (state, action) => {
-        console.log(action);
-        state.isLoading = false;
-      });
-  },
-});
-```
+   - You must have Node installed on our machine to access the NPM (Node Package Manager) tool.
+   Run `node -v` and `npm -v` in the terminal to see if you have node and npm installed, respectively. Ensure you have node>=14.0.0 and npm>=5.6\
+   If you don’t have them installed, head to [Node](https://nodejs.org/) to download and install the latest stable version.
+
+
+- ### Setup
+    Clone this repository to your desired folder:
+    ```sh
+    cd my-folder
+    git clone git@github.com:luigirazum/mv-reduxtoolkit-shopcartapp.git
+    ```
+- ### Install
+    Install the package dependencies for this project with:
+    ```sh
+    cd mv-reduxtoolkit-shopcartapp
+    npm install
+    ```
+
+
+### Available Scripts
+- #### Run
+    In the project directory, you can run:
+
+    ```sh
+    npm start
+    ```
+
+  - Runs the app in the development mode.
+    - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - The page will reload when you make changes.
+  - You may also see any lint errors in the console.
+
+- #### Test
+    ```sh
+    npm test
+    ```
+
+   - Launches the test runner in the interactive watch mode.\
+    See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+- #### Build
+    ```sh
+    npm run build
+    ```
+
+  - Builds the app for production to the `build` folder.
+    - It correctly bundles React in production mode and optimizes the build for the best performance.
+  - The build is minified and the filenames include the hashes.
+  - Your app is ready to be deployed!.
+
+- #### Deploy
+    ```sh
+    npm run deploy
+    ```
+
+  - You can deploy this project using the above.
+  - Your app is deployed!\
+    See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 👥 Authors <a name="authors"></a>
+
+👨‍💻 **Luis Zubia**
+
+- GitHub: <a href="https://github.com/luigirazum" target="_blank" rel="noopener noreferrer">**@luigirazum**</a>
+- Twitter: <a href="https://twitter.com/LuigiRazum" target="_blank" rel="noopener noreferrer">**@LuigiRazum**</a>
+- LinkedIn: <a href="https://linkedin.com/in/luiszubia" target="_blank" rel="noopener noreferrer">**Luis Zubia**</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] *Create a **form** to add new items*
+- [ ] *Create a **login page** so users can save their cart*
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🤝 Contributing <a name="contributing"></a>
+
+In order to improve this project, contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgments"></a>
+- 👏 I would like to thank the support of my partners.
+- 👏 Also thanks to [John Smilga](https://github.com/john-smilga) who creates this [👨‍💻 Redux Toolkit Tutorial – JavaScript State Management Library](https://www.youtube.com/watch?v=bbkBuqC1rU4) which I follow in order to learn how [**Redux**](https://redux-toolkit.js.org/) works.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## ⭐ Show your support <a name="support"></a>
+
+I really enjoyed making this project, so, if you like it, I appreciate your support giving a ⭐.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!--
+## ❓ FAQ <a name="faq"></a>
+
+- *Why should you use this project?*
+
+  - Because you can realize what you can achieve using this amazing tool.
+
+- *Why did I make this project?*
+
+  - In order to start putting in practice the use of WebPack, JS ES6 modules and API's.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
